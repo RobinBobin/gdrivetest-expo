@@ -1,6 +1,9 @@
 {
-  "extends": "expo/tsconfig.base",
   "compilerOptions": {
-    "strict": true
-  }
+    "rootDir": "."
+  },
+  "exclude": ["babel.config.js"],
+  "extends": ["expo/tsconfig.base", "@robinbobin/ts-eslint-prettier"],
+  "files": ["eslint.config.mjs", "index.js", "prettier.config.mjs"],
+  "include": ["**/*.ts", "**/*.tsx"]
 }
