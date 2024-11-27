@@ -3,7 +3,10 @@
     "rootDir": "."
   },
   "exclude": ["babel.config.js"],
-  "extends": ["expo/tsconfig.base", "@robinbobin/ts-eslint-prettier"],
+  "extends": [
+    "expo/tsconfig.base",
+    "@robinbobin/ts-eslint-prettier/tsconfig.base"
+  ],
   "files": ["eslint.config.mjs", "index.js", "prettier.config.mjs"],
   "include": ["**/*.ts", "**/*.tsx"]
 }
