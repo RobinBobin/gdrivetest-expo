@@ -14,17 +14,18 @@ const styles = StyleSheet.create({
 
 export const App: React.FC = () => {
   useEffect(() => {
-    const init = async (): Promise<void> => {
+    const init = (): void => {
       const gdrv = new GDrive()
+      gdrv.files.accessParameters.fetchTimeout.toString()
 
-      try {
-        console.log(await gdrv.about.get('*'))
-      } catch (error) {
-        console.log(error)
-      }
+      // try {
+      //   console.log(await gdrv.about.get('*'))
+      // } catch (error) {
+      //   console.log(error)
+      // }
     }
 
-    void init()
+    init()
   }, [])
 
   return (
