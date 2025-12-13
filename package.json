@@ -9,16 +9,23 @@
     "semver": "^7.7.3"
   },
   "devDependencies": {
+    "@robinbobin/eslint-config-react-native": "^1.0.1",
+    "@robinbobin/prettier-config": "^0.0.5",
+    "@robinbobin/ts-config": "^1.0.0",
     "@types/react": "~19.1.0",
     "@types/semver": "^7.7.1",
+    "eslint": "^9.39.2",
+    "prettier": "^3.7.4",
     "typescript": "~5.9.2"
   },
   "main": "index.ts",
+  "type": "module",
   "name": "gdrivetest-expo",
   "scripts": {
     "build-android-development": "pnpm eas build --platform android --profile development",
     "clean": "rm -rf node_modules && pnpm i",
-    "eas": "pnpm dlx eas-cli@latest"
+    "eas": "pnpm dlx eas-cli@latest",
+    "prettify": "tsc && eslint --fix && prettier . --write"
   },
   "version": "1.0.0"
 }
