@@ -15,8 +15,13 @@
     "@types/react": "~19.1.0",
     "@types/semver": "^7.7.1",
     "eslint": "^9.39.2",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.2.7",
     "prettier": "^3.7.4",
     "typescript": "~5.9.2"
+  },
+  "lint-staged": {
+    "*.{js,json,ts,tsx}": "pnpm prettify"
   },
   "main": "index.ts",
   "type": "module",
@@ -25,7 +30,8 @@
     "build-android-development": "pnpm eas build --platform android --profile development",
     "clean": "rm -rf node_modules && pnpm i",
     "eas": "pnpm dlx eas-cli@latest",
-    "prettify": "tsc && eslint --fix && prettier . --write"
+    "prettify": "tsc && eslint --fix && prettier . --write",
+    "prepare": "husky"
   },
   "version": "1.0.0"
 }
