@@ -39,6 +39,13 @@ const config: ExpoConfig = {
   orientation: 'portrait',
   plugins: [
     [
+      '@react-native-google-signin/google-signin',
+      {
+        iosUrlScheme:
+          'com.googleusercontent.apps.300184074915-i47tcgqq04d7cdomhbsbme5lm53eckd8'
+      }
+    ],
+    [
       'expo-dev-client',
       {
         launchMode: 'most-recent'

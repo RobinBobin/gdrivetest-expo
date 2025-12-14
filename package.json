@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "@react-native-google-signin/google-signin": "^16.0.0",
     "expo": "~54.0.29",
     "expo-dev-client": "~6.0.20",
     "expo-status-bar": "~3.0.9",
@@ -27,9 +28,11 @@
   "name": "gdrivetest-expo",
   "packageManager": "pnpm@10.25.0+sha512.5e82639027af37cf832061bcc6d639c219634488e0f2baebe785028a793de7b525ffcd3f7ff574f5e9860654e098fe852ba8ac5dd5cefe1767d23a020a92f501",
   "scripts": {
+    "android": "expo run:android",
     "build-android-development": "pnpm eas build --platform android --profile development",
     "clean": "rm -rf node_modules && pnpm i",
     "eas": "pnpm dlx eas-cli@latest",
+    "ios": "expo run:ios",
     "prettify": "tsc && eslint --fix && prettier . --write",
     "prepare": "husky"
   },
