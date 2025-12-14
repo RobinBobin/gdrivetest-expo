@@ -1,16 +1,27 @@
+import { GoogleSignin } from '@react-native-google-signin/google-signin'
 import { StatusBar } from 'expo-status-bar'
-import { Text, View } from 'react-native'
+import { useState } from 'react'
+import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context'
 
+import { Main } from './Main'
+import { SignIn } from './SignIn'
 import styles from './styles'
-import { useGoogleSignin } from './useGoogleSignin'
+import { useConfigure } from './useConfigure'
 
 export const App: React.FC = () => {
-  useGoogleSignin()
+  const [idToken, setIdToken] = useState(GoogleSignin.getCurrentUser()?.idToken)
+
+  useConfigure()
+
+  const isTokenValid = typeof idToken === 'string'
+  const Ui = isTokenValid ? Main : SignIn
 
   return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar />
-    </View>
+    <SafeAreaProvider>
+      <SafeAreaView style={styles.container}>
+        <StatusBar />
+        <Ui setIdToken={setIdToken} />
+      </SafeAreaView>
+    </SafeAreaProvider>
   )
 }
