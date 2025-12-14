@@ -7,4 +7,5 @@ onlyBuiltDependencies:
   - '@robinbobin/eslint-config-react-native'
   - '@robinbobin/prettier-config'
   - '@robinbobin/ts-config'
+  - dtrace-provider
   - unrs-resolver
