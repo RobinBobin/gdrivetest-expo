@@ -1,30 +1,30 @@
-import type { IWithSetIdToken } from '../common'
+import type { IWithSetIsIdTokenValid } from '../common'
 
 import { GoogleSignin } from '@react-native-google-signin/google-signin'
 
-import { Button } from '../common'
+import { Button, gdrive } from '../common'
 
-export const SignIn: React.FC<IWithSetIdToken> = ({ setIdToken }) => {
-  const signIn = (): void => {
-    const ff = async (): Promise<void> => {
-      try {
-        const hasPlayServices = await GoogleSignin.hasPlayServices()
+export const SignIn: React.FC<IWithSetIsIdTokenValid> = ({
+  setIsIdTokenValid
+}) => {
+  const signIn = async (): Promise<void> => {
+    const hasPlayServices = await GoogleSignin.hasPlayServices()
 
-        if (!hasPlayServices) {
-          console.log('No play services')
-
-          return
-        }
-
-        const response = await GoogleSignin.signIn()
-
-        setIdToken(response.data?.idToken)
-      } catch (error) {
-        console.log('signIn() failed', error)
-      }
+    if (!hasPlayServices) {
+      throw new Error('No play services')
     }
 
-    void ff()
+    const { type } = await GoogleSignin.signIn()
+
+    if (type === 'cancelled') {
+      throw new Error('Sign-in cancelled')
+    }
+
+    const { accessToken } = await GoogleSignin.getTokens()
+
+    gdrive.accessToken = accessToken
+
+    setIsIdTokenValid(true)
   }
 
   return <Button hasMarginTop={false} onPress={signIn} title='Sign in' />

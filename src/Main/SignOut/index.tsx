@@ -1,22 +1,16 @@
-import type { IWithSetIdToken } from '../../common'
+import type { IWithSetIsIdTokenValid } from '../../common'
 
 import { GoogleSignin } from '@react-native-google-signin/google-signin'
 
-import { Button } from '../../common'
+import { Button, resetIdToken } from '../../common'
 
-export const SignOut: React.FC<IWithSetIdToken> = ({ setIdToken }) => {
-  const signOut = (): void => {
-    const ff = async (): Promise<void> => {
-      try {
-        await GoogleSignin.signOut()
+export const SignOut: React.FC<IWithSetIsIdTokenValid> = ({
+  setIsIdTokenValid
+}) => {
+  const signOut = async (): Promise<void> => {
+    await GoogleSignin.signOut()
 
-        setIdToken(undefined)
-      } catch (error) {
-        console.log('signOut() failed', error)
-      }
-    }
-
-    void ff()
+    resetIdToken(setIsIdTokenValid)
   }
 
   return <Button onPress={signOut} title='Sign out' />

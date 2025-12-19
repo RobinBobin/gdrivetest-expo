@@ -11,6 +11,12 @@ importers:
       '@react-native-google-signin/google-signin':
         specifier: ^16.0.0
         version: 16.0.0(expo@54.0.29(@babel/core@7.28.5)(react-native@0.81.5(@babel/core@7.28.5)(@types/react@19.1.17)(react@19.1.0))(react@19.1.0))(react-native@0.81.5(@babel/core@7.28.5)(@types/react@19.1.17)(react@19.1.0))(react@19.1.0)
+      '@robinbobin/mimetype-constants':
+        specifier: ^2.0.2
+        version: 2.0.2
+      '@robinbobin/react-native-google-drive-api-wrapper':
+        specifier: ^2.2.4
+        version: 2.2.4
       expo:
         specifier: ~54.0.29
         version: 54.0.29(@babel/core@7.28.5)(react-native@0.81.5(@babel/core@7.28.5)(@types/react@19.1.17)(react@19.1.0))(react@19.1.0)
@@ -895,10 +901,16 @@ packages:
     peerDependencies:
       eslint: ^9.39.1
 
+  '@robinbobin/mimetype-constants@2.0.2':
+    resolution: {integrity: sha512-mNxTnhDo4OPKC0YmRQM7gka82+5uNq/Wa5hnZS+f+QK7GeqRT9lb5ppzuL7O0cQsncodJwF/XnWwDwe8P7VX5g==}
+
   '@robinbobin/prettier-config@0.0.5':
     resolution: {integrity: sha512-Nn7uKHKwQBnDhMV4BqQU85UqA7jhqPk4P0Hpj6UsvKJ3vIfxDnh+cCue9pVcMezC9kg/ZtS3Ccqwjm2qi7lwkw==}
     peerDependencies:
       prettier: ^3.6.2
+
+  '@robinbobin/react-native-google-drive-api-wrapper@2.2.4':
+    resolution: {integrity: sha512-xAYW0zsFh7MVYrzA2hCZqYE7mmuhMtPrErd9O4UnoU8dMeJsjtH+zde15iwXyhzsxdZMB/MsYQGLAK1sACXN2w==}
 
   '@robinbobin/ts-config@1.0.0':
     resolution: {integrity: sha512-fM1GSBBWWKmlpWrSfq8gU8lXPIZr/jJXryfLw3UjMF3AGkllAiqFDPPK8szhtJLOHg73oBGP0T6I2B3FmXVOFw==}
@@ -2722,6 +2734,10 @@ packages:
   queue@6.0.2:
     resolution: {integrity: sha512-iHZWu+q3IdFZFX36ro/lKBkSvfkztY5Y7HMiPlOUjhupPcG2JMfst2KKEpu5XndviX/3UhFbRngUPNKtgvtZiA==}
 
+  radashi@12.7.1:
+    resolution: {integrity: sha512-rwxcGY3oKMQJ+ojhS4MlxyVWqdXPVJSxg3ZjXDYYz26DYRuAAs+7XBM406/GYzPEBbjSJqdKfHDpBRfjWn34RQ==}
+    engines: {node: '>=16.0.0'}
+
   range-parser@1.2.1:
     resolution: {integrity: sha512-Hrgsx+orqoygnmhFbKaHE6c296J+HTAQXoxEF6gNupROmmGJRoyzfG3ccAveqCBrwr/2yxQ5BVd/GTl5agOwSg==}
     engines: {node: '>= 0.6'}
@@ -3157,6 +3173,9 @@ packages:
 
   uri-js@4.4.1:
     resolution: {integrity: sha512-7rKUyy33Q1yc98pQ1DAmLtwX109F7TIfWlW1Ydo8Wl1ii1SeHieeh0HHfPeL2fMXK6z0s8ecKs9frCuLJvndBg==}
+
+  utf8@3.0.0:
+    resolution: {integrity: sha512-E8VjFIQ/TyQgp+TZfS6l8yp/xWppSAHzidGiRrqe4bK4XP9pTRyKFgGJpO3SN7zdX4DeomTrwaseCHovfpFcqQ==}
 
   utils-merge@1.0.1:
     resolution: {integrity: sha512-pMZTvIkT1d+TFGvDOqodOclx0QWkkgi6Tdoa8gC8ffGAAqz9pzPTZWAybbsHHoED/ztMtkv/VoYTYyShUn81hA==}
@@ -4551,9 +4570,20 @@ snapshots:
       - supports-color
       - typescript
 
+  '@robinbobin/mimetype-constants@2.0.2':
+    dependencies:
+      radashi: 12.7.1
+
   '@robinbobin/prettier-config@0.0.5(prettier@3.7.4)':
     dependencies:
       prettier: 3.7.4
+
+  '@robinbobin/react-native-google-drive-api-wrapper@2.2.4':
+    dependencies:
+      '@robinbobin/mimetype-constants': 2.0.2
+      base64-js: 1.5.1
+      radashi: 12.7.1
+      utf8: 3.0.0
 
   '@robinbobin/ts-config@1.0.0(typescript@5.9.3)':
     dependencies:
@@ -6613,6 +6643,8 @@ snapshots:
     dependencies:
       inherits: 2.0.4
 
+  radashi@12.7.1: {}
+
   range-parser@1.2.1: {}
 
   rc@1.2.8:
@@ -7088,6 +7120,8 @@ snapshots:
   uri-js@4.4.1:
     dependencies:
       punycode: 2.3.1
+
+  utf8@3.0.0: {}
 
   utils-merge@1.0.1: {}
 
