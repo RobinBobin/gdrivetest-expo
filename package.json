@@ -37,7 +37,8 @@
     "eas": "pnpm dlx eas-cli@latest",
     "ios": "expo run:ios",
     "prettify": "tsc && eslint --fix && prettier . --write",
-    "prepare": "husky"
+    "prepare": "husky",
+    "start": "expo start"
   },
   "type": "module",
   "version": "1.0.0"
