@@ -5,7 +5,7 @@ import { Button as RNButton, View } from 'react-native'
 
 interface IButtonProps extends Omit<ButtonProps, 'onPress'> {
   hasMarginTop?: boolean
-  onPress?: () => Promise<unknown>
+  onPress?: (() => Promise<unknown>) | (() => unknown)
 }
 
 export const Button: React.FC<IButtonProps> = ({
