@@ -8,7 +8,7 @@ import { gdrive } from './common'
 type TUseInitReturnType = [boolean, Dispatch<SetStateAction<boolean>>]
 
 export const useInit = (): TUseInitReturnType => {
-  const [isValid, setIsValid] = useState(false)
+  const [isSignedIn, setIsSignedIn] = useState(false)
 
   useEffect(() => {
     const ff = async (): Promise<void> => {
@@ -29,7 +29,7 @@ export const useInit = (): TUseInitReturnType => {
 
           gdrive.accessToken = accessToken
 
-          setIsValid(true)
+          setIsSignedIn(true)
         }
       } catch (error) {
         console.log('useInit() failed', error)
@@ -39,5 +39,5 @@ export const useInit = (): TUseInitReturnType => {
     void ff()
   }, [])
 
-  return [isValid, setIsValid]
+  return [isSignedIn, setIsSignedIn]
 }

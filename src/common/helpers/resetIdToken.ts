@@ -1,11 +1,11 @@
-import type { IWithSetIsIdTokenValid } from '../types'
+import type { IWithSetIsSignedIn } from '../types'
 
 import { gdrive } from '../gdrive'
 
 export const resetIdToken = (
-  setIsIdTokenValid: IWithSetIsIdTokenValid['setIsIdTokenValid']
+  setIsSignedIn: IWithSetIsSignedIn['setIsSignedIn']
 ): void => {
-  setIsIdTokenValid(false)
+  setIsSignedIn(false)
 
   gdrive.accessToken = ''
 }

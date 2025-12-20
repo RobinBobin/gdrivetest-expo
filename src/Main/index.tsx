@@ -1,4 +1,4 @@
-import type { IWithSetIsIdTokenValid } from '../common'
+import type { IWithSetIsSignedIn } from '../common'
 
 import { ScrollView } from 'react-native'
 
@@ -7,13 +7,11 @@ import { Files } from './Files'
 import { RevokeAccess } from './RevokeAccess'
 import { SignOut } from './SignOut'
 
-export const Main: React.FC<IWithSetIsIdTokenValid> = ({
-  setIsIdTokenValid
-}) => {
+export const Main: React.FC<IWithSetIsSignedIn> = ({ setIsSignedIn }) => {
   return (
     <ScrollView>
-      <RevokeAccess setIsIdTokenValid={setIsIdTokenValid} />
-      <SignOut setIsIdTokenValid={setIsIdTokenValid} />
+      <RevokeAccess setIsSignedIn={setIsSignedIn} />
+      <SignOut setIsSignedIn={setIsSignedIn} />
       <About />
       <Files />
     </ScrollView>

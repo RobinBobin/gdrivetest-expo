@@ -1,12 +1,10 @@
-import type { IWithSetIsIdTokenValid } from '../common'
+import type { IWithSetIsSignedIn } from '../common'
 
 import { GoogleSignin } from '@react-native-google-signin/google-signin'
 
 import { Button, gdrive } from '../common'
 
-export const SignIn: React.FC<IWithSetIsIdTokenValid> = ({
-  setIsIdTokenValid
-}) => {
+export const SignIn: React.FC<IWithSetIsSignedIn> = ({ setIsSignedIn }) => {
   const signIn = async (): Promise<void> => {
     const hasPlayServices = await GoogleSignin.hasPlayServices()
 
@@ -24,7 +22,7 @@ export const SignIn: React.FC<IWithSetIsIdTokenValid> = ({
 
     gdrive.accessToken = accessToken
 
-    setIsIdTokenValid(true)
+    setIsSignedIn(true)
   }
 
   return <Button hasMarginTop={false} onPress={signIn} title='Sign in' />

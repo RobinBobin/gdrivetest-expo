@@ -1,3 +1,3 @@
-export interface IWithSetIsIdTokenValid {
-  setIsIdTokenValid: React.Dispatch<React.SetStateAction<boolean>>
+export interface IWithSetIsSignedIn {
+  setIsSignedIn: React.Dispatch<React.SetStateAction<boolean>>
 }

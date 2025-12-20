@@ -1,16 +1,16 @@
-import type { IWithSetIsIdTokenValid } from '../../common'
+import type { IWithSetIsSignedIn } from '../../common'
 
 import { GoogleSignin } from '@react-native-google-signin/google-signin'
 
 import { Button, resetIdToken } from '../../common'
 
-export const RevokeAccess: React.FC<IWithSetIsIdTokenValid> = ({
-  setIsIdTokenValid
+export const RevokeAccess: React.FC<IWithSetIsSignedIn> = ({
+  setIsSignedIn
 }) => {
   const revokeAccess = async (): Promise<void> => {
     await GoogleSignin.revokeAccess()
 
-    resetIdToken(setIsIdTokenValid)
+    resetIdToken(setIsSignedIn)
   }
 
   return (

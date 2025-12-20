@@ -7,15 +7,15 @@ import styles from './styles'
 import { useInit } from './useInit'
 
 export const App: React.FC = () => {
-  const [isIdTokenValid, setIsIdTokenValid] = useInit()
+  const [isSignedIn, setIsSignedIn] = useInit()
 
-  const Ui = isIdTokenValid ? Main : SignIn
+  const Ui = isSignedIn ? Main : SignIn
 
   return (
     <SafeAreaProvider>
       <SafeAreaView style={styles.container}>
         <StatusBar />
-        <Ui setIsIdTokenValid={setIsIdTokenValid} />
+        <Ui setIsSignedIn={setIsSignedIn} />
       </SafeAreaView>
     </SafeAreaProvider>
   )
