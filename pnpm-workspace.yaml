@@ -1,4 +1,5 @@
 ignoredBuiltDependencies:
+  - '@robinbobin/eslint-config'
   - '@robinbobin/eslint-config-react'
 
 nodeLinker: hoisted
