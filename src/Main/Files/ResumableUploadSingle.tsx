@@ -1,4 +1,4 @@
-import { mimeTypes } from '@robinbobin/mimetype-constants'
+import { MIME_TYPES } from '@robinbobin/react-native-google-drive-api-wrapper'
 
 import { Button, gdrive } from '../../common'
 
@@ -9,7 +9,7 @@ export const ResumableUploadSingle: React.FC = () => {
 
     const uploadRequest = await gdrive.files
       .newResumableUploader()
-      .setDataMimeType(mimeTypes.application.octetStream)
+      .setDataMimeType(MIME_TYPES.application.octetStream)
       .setRequestBody({
         name: `resumable bin ${Date.now()}`
       })

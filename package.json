@@ -1,8 +1,7 @@
 {
   "dependencies": {
     "@react-native-google-signin/google-signin": "^16.0.0",
-    "@robinbobin/mimetype-constants": "^2.0.2",
-    "@robinbobin/react-native-google-drive-api-wrapper": "^2.2.4",
+    "@robinbobin/react-native-google-drive-api-wrapper": "^2.2.5",
     "expo": "~54.0.29",
     "expo-dev-client": "~6.0.20",
     "expo-status-bar": "~3.0.9",
