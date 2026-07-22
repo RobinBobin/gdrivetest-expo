@@ -57,6 +57,7 @@ const config: ExpoConfig = {
         resizeMode: 'contain'
       }
     ],
+    'expo-status-bar',
     'expo-system-ui'
   ],
   runtimeVersion: RUNTIME_VERSION,
