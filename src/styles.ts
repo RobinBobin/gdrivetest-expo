@@ -5,5 +5,9 @@ export default StyleSheet.create({
     backgroundColor: '#fff',
     flex: 1,
     padding: 15
+  },
+  expoVersion: {
+    fontSize: 18,
+    marginBottom: 10
   }
 })

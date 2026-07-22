@@ -17,6 +17,9 @@ importers:
       expo:
         specifier: ~55.0.28
         version: 55.0.28(@babel/core@7.29.7(supports-color@8.1.1))(@expo/dom-webview@55.0.6)(react-native@0.83.6(@babel/core@7.29.7(supports-color@8.1.1))(@types/react@19.2.17)(react@19.2.0)(supports-color@8.1.1))(react@19.2.0)(supports-color@8.1.1)(typescript@5.9.3)
+      expo-constants:
+        specifier: ^57.0.6
+        version: 57.0.6(expo@55.0.28)(react-native@0.83.6(@babel/core@7.29.7(supports-color@8.1.1))(@types/react@19.2.17)(react@19.2.0)(supports-color@8.1.1))(supports-color@8.1.1)
       expo-dev-client:
         specifier: ~55.0.37
         version: 55.0.37(expo@55.0.28)
@@ -1807,6 +1810,12 @@ packages:
 
   expo-constants@55.0.17:
     resolution: {integrity: sha512-t0SNWmXTjXPCHzjNsv1Okjaj8SpXQcUjDPtYDqvofDS+BhAsvlKNmwaaWXvduBjjmmmJWNH8q1/x9IWQ+upg8g==}
+    peerDependencies:
+      expo: '*'
+      react-native: '*'
+
+  expo-constants@57.0.6:
+    resolution: {integrity: sha512-OV+4XUshdO18TKNlo1cxUkXeJWgUOPgalvl8ofmc7kmPPHoyfz2hGJ94tyY/RND/GG5RREE+me9YHClNEzo+Ow==}
     peerDependencies:
       expo: '*'
       react-native: '*'
@@ -5451,6 +5460,14 @@ snapshots:
   expo-constants@55.0.17(expo@55.0.28)(react-native@0.83.6(@babel/core@7.29.7(supports-color@8.1.1))(@types/react@19.2.17)(react@19.2.0)(supports-color@8.1.1))(supports-color@8.1.1):
     dependencies:
       '@expo/env': 2.1.3(supports-color@8.1.1)
+      expo: 55.0.28(@babel/core@7.29.7(supports-color@8.1.1))(@expo/dom-webview@55.0.6)(react-native@0.83.6(@babel/core@7.29.7(supports-color@8.1.1))(@types/react@19.2.17)(react@19.2.0)(supports-color@8.1.1))(react@19.2.0)(supports-color@8.1.1)(typescript@5.9.3)
+      react-native: 0.83.6(@babel/core@7.29.7(supports-color@8.1.1))(@types/react@19.2.17)(react@19.2.0)(supports-color@8.1.1)
+    transitivePeerDependencies:
+      - supports-color
+
+  expo-constants@57.0.6(expo@55.0.28)(react-native@0.83.6(@babel/core@7.29.7(supports-color@8.1.1))(@types/react@19.2.17)(react@19.2.0)(supports-color@8.1.1))(supports-color@8.1.1):
+    dependencies:
+      '@expo/env': 2.4.2(supports-color@8.1.1)
       expo: 55.0.28(@babel/core@7.29.7(supports-color@8.1.1))(@expo/dom-webview@55.0.6)(react-native@0.83.6(@babel/core@7.29.7(supports-color@8.1.1))(@types/react@19.2.17)(react@19.2.0)(supports-color@8.1.1))(react@19.2.0)(supports-color@8.1.1)(typescript@5.9.3)
       react-native: 0.83.6(@babel/core@7.29.7(supports-color@8.1.1))(@types/react@19.2.17)(react@19.2.0)(supports-color@8.1.1)
     transitivePeerDependencies:
