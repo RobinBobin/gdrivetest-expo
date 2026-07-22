@@ -49,16 +49,19 @@ const config: ExpoConfig = {
         launchMode: 'most-recent'
       }
     ],
+    [
+      'expo-splash-screen',
+      {
+        backgroundColor: '#ffffff',
+        image: './assets/splash-icon.png',
+        resizeMode: 'contain'
+      }
+    ],
     'expo-system-ui'
   ],
   runtimeVersion: RUNTIME_VERSION,
   scheme: SCHEME,
   slug: packageJsonName,
-  splash: {
-    backgroundColor: '#ffffff',
-    image: './assets/splash-icon.png',
-    resizeMode: 'contain'
-  },
   userInterfaceStyle: 'automatic',
   version: packageJsonVersion
 }
