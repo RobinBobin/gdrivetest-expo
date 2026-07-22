@@ -1,12 +1,7 @@
-ignoredBuiltDependencies:
-  - '@robinbobin/eslint-config'
-  - '@robinbobin/eslint-config-react'
-
-nodeLinker: hoisted
-
-onlyBuiltDependencies:
-  - '@robinbobin/eslint-config-react-native'
-  - '@robinbobin/prettier-config'
-  - '@robinbobin/ts-config'
-  - dtrace-provider
-  - unrs-resolver
+allowBuilds:
+  '@robinbobin/eslint-config': false
+  '@robinbobin/eslint-config-react': false
+  '@robinbobin/eslint-config-react-native': true
+  '@robinbobin/prettier-config': true
+  '@robinbobin/ts-config': true
+  unrs-resolver: true
