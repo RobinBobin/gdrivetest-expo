@@ -21,7 +21,6 @@ const config: ExpoConfig = {
       backgroundColor: '#ffffff',
       foregroundImage: './assets/adaptive-icon.png'
     },
-    edgeToEdgeEnabled: true,
     package: SCHEME
   },
   extra: {
@@ -35,7 +34,6 @@ const config: ExpoConfig = {
     supportsTablet: true
   },
   name: packageJsonName,
-  newArchEnabled: true,
   orientation: 'portrait',
   plugins: [
     [
